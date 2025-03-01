@@ -13,7 +13,13 @@ function App(){
         "Abuja",
       ];
 
-    return <div><ListGroup  items={items}  heading= "Cities" /></div>
+      const handleSelectItem = (item:string) => {
+        console.log(item);
+      }
+
+    return <div>
+      <ListGroup  items={items}  heading= "Cities"  onSelectedtem={handleSelectItem}/>
+    </div>
 }
 
 export default App;
